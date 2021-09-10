@@ -139,6 +139,7 @@ body {
     justify-content: space-between;
     width: 375px;
     padding-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* background-color: chartreuse; */
 }
 
@@ -207,6 +208,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100;
 }
 
 .subtotal-item {
@@ -227,7 +229,7 @@ body {
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON HOME PAGE */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 870px) {
 
     body {
         min-width: max-content;
@@ -242,11 +244,7 @@ body {
     }
 
     .list-container {
-    /* flex-wrap: nowrap; */
-    /* background-color: chocolate; */
-    display: flex;
     flex-direction: column;
-    /* overflow: none; */
     min-width: max-content;
     width: 100%;
     }
@@ -256,33 +254,26 @@ body {
     }
 
     .list-item-container {
-        /* width: 400px; */
+        width: 400px;
         display: flex;
         flex-direction: column;
         padding-right: 0;
         justify-content: space-between;
-        width: 400px;
-        /* padding-bottom: 20px; */
         min-width: max-content;
-        /* background-color: chartreuse; */
     }
 
     .subtotal-container-container {
         display: flex;
         align-items: center;
-        justify-content: center;
         padding-top: 25px;
-        padding-right: 0;
         padding-bottom: 20px;
-        min-width: 450px;
+        padding-right: 0;
     }
-}
 
-@media screen and (max-width: 300px) {
-    .shipment-container {
-    /* background-color: red; */
-    padding-right: 20px;
-    overflow: none;
+    .subtotal-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
     }
 }
 
