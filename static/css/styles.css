@@ -80,16 +80,24 @@ body {
     justify-content: end;
 }
 
+.border-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .border-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 95%;
 }
 
 .header-bottom-border {
     border-bottom: #F8CA7E solid 2px;
-    width: 98%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .bg-text {
@@ -277,6 +285,7 @@ body {
     }
 }
 
+
 /*************************************
                 SIGN-IN
 *************************************/
@@ -388,6 +397,48 @@ body {
     font-family: 'Roboto';
     color: #FFFFFF;
     padding: 0px 0px 0px 10px;
+}
+
+/* FOR MEDIA DEVICE RESPONSIVENESS ON SIGN-IN */
+
+@media screen and (max-width: 870px) {
+    .background {
+        background-size: 100% 75%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 700px;
+        min-width: 500px;
+    }
+    
+    .bg-text-container {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+
+    }
+
+    .bg-text {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: left;
+        padding-left: 0;
+        font-size: 75px;
+        margin-top: 300px;
+        font-family: 'Prata';
+    }
+
+    .sign-in-inner {
+        width: 70%;
+        margin: 23% auto;
+        background: #444444;
+        /* height: 30vh; */
+        height: max-content;
+        border-radius: 20px;
+        overflow: none;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /*************************************
@@ -502,9 +553,83 @@ body {
     padding: 0px 0px 0px 10px;
 }
 
+/* FOR MEDIA DEVICE RESPONSIVENESS ON SIGN-UP */
+
+@media screen and (max-width: 870px) {
+    .background {
+        background-size: 100% 75%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 700px;
+        min-width: 500px;
+    }
+
+    .bg-text-container {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+
+    }
+
+    .bg-text {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: left;
+        padding-left: 0;
+        font-size: 75px;
+        margin-top: 300px;
+        font-family: 'Prata';
+    }
+
+    .sign-up-inner {
+        width: 70%;
+        margin: 23% auto;
+        background: #444444;
+        /* height: 30vh; */
+        height: max-content;
+        border-radius: 20px;
+        overflow: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /*************************************
-                CART
+           CART PHONE VIEW
+*************************************/
+
+.bg-text-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: left;
+    padding-left: 50px;
+    font-size: 75px;
+    margin-top: 100px;
+    font-family: 'Prata';
+    /* background-color: yellow; */
+}
+
+@media screen and (max-width: 870px) {
+    .bg-text-phone {
+        /* background-color: aqua; */
+        /* width: 400px; */
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding-left: 0;
+        margin-top: 100px;
+        
+    }
+
+    .bg-text-phone div {
+        margin-right: 115px;
+    }
+}
+
+/*************************************
+                SHIPPING
 *************************************/
 
 /* NAV */
@@ -714,24 +839,81 @@ body {
     font-weight: lighter;
 }
 
-/* FOR MEDIA DEVICE RESPONSIVENESS ON CART PAGE */
+/* FOR MEDIA DEVICE RESPONSIVENESS ON SHIPPING */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 870px) {
     .label {
-    flex-wrap: nowrap;
-    /* background-color: chocolate; */
-    overflow: none;
-    min-width: max-content;
-    }
-}
+        flex-wrap: nowrap;
+        /* background-color: chocolate; */
+        overflow: none;
+        min-width: max-content;
+        }
 
-@media screen and (max-width: 300px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+        /* background-color: beige; */
+        min-width: 450px;
+    }
+
+    .art-and-soul {
+        font-family: 'Prata';
+        /* background-color: aqua; */
+    }
+
+    .sign-in {
+        color: #F8CA7E;
+        font-family: 'Raleway';
+        font-weight: lighter;
+        text-decoration: none;
+        padding-right: 10px;
+        /* background-color: burlywood; */
+    }
+    
+    .bag {
+        padding: 0px 0px 0px 30px;
+        height: 20px;
+        /* background-color: chocolate; */
+    }
+
+    .message-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        background-color: #F8CA7E;
+    }
+
     .shipment-container {
     /* background-color: red; */
-    padding-right: 20px;
+    padding-right: 0px;
     overflow: none;
     }
-}
+
+    .shipment {
+        /* background-color: blueviolet; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 80%;
+        overflow: none;
+    }
+    .shipment-form {
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: left;
+        width: 80%;
+        padding-right: 0px;
+        font-family: 'Raleway';
+    }
+    
+}    
 
 /***************************************
             ORDER CONFIRM 
@@ -817,6 +999,20 @@ body {
 
 .back-to-home-button a {
     text-decoration: none;
+}
+
+/* FOR MEDIA DEVICE RESPONSIVENESS ON ORDER CONFIRM */
+
+@media screen and (max-width: 870px) {
+    .message-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        background-color: #F8CA7E;
+        margin-bottom: 100px;
+    }
+
 }
 
 /************************************
